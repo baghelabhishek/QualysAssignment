@@ -10,8 +10,11 @@ public class VegPizzaNotHaveNonVegTopping implements Validator {
 
     public void execute(Pizza pizza) {
         if (pizza.getPizzaType().equals(VEG)){
-            if (pizza.getToppings().getPizzaType().equals(NON_VEG)){
-                throw new RuntimeException("Vegetarian pizza cannot have a non-vegetarian topping.");
+
+            for (Toppings toppings:pizza.getToppings()){
+                if (toppings.getPizzaType().equals(PizzaType.NON_VEG)){
+                    throw new RuntimeException("Vegetarian pizza cannot have a non-vegetarian topping.");
+                }
             }
 
         }

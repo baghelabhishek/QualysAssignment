@@ -15,6 +15,9 @@ public class Pizza {
     private List<Sides> sidesList;
     private Size size;
 
+    public Pizza() {
+    }
+
     private Pizza(Builder builder){
         this.crust = builder.crust;
         this.pizzaName = builder.pizzaName;
