@@ -4,18 +4,27 @@ problem statement
 The service will be accepting requests from multiple self-­service terminals.
 • Customers can select one or more Pizzas from the menu and then customize them with
 available options.
+
 • Customers should be able to select a type of crust and add extra toppings.
+
 • Customers should be able to verify their order, check the amount and place the order Once
 the order is received service will verify the business rules and confirm the order. Payment
 /order processing workflow is intentionally skipped here to keep it simple.
+
 • Customers can also place side orders along with the pizza order.
+
 • The “PizzaFactory” ensures that appropriate inventory is available before allowing
 customers to proceed with their orders. It also makes best efforts to utilize inventory in an
 optimal manner to fulfill maximum orders.
+
 • Customers can’t cancel the order once it is placed.
+
 • The vendor can restock inventory through “PizzaFactory” service.
+
 • The vendor should be able to add new pizzas, toppings, sides and also change prices.
+
 • The design should require minimal changes in the code while adding new business rules.
+
 
 
 The menu:
@@ -64,7 +73,11 @@ Sides:
 Business rules:
 
 ● Vegetarian pizza cannot have a non-­vegetarian topping.
+
 ● Non-­vegetarian pizza cannot have paneer topping.
+
 ● Only one type of crust can be selected for any pizza.
+
 ● You can add only one of the non-­veg toppings in non-­vegetarian pizza.
+
 ● Large size pizzas come with any 2 toppings of customers choice with no additional cost.
