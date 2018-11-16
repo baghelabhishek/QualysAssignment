@@ -57,9 +57,12 @@ Non-­Veg toppings:
 Extra cheese: (Rs 35)
 
 Sides:
+
 Ø Cold drink (Rs 55)
 Ø Mousse cake (Rs. 90)
+
 Business rules:
+
 ● Vegetarian pizza cannot have a non-­vegetarian topping.
 ● Non-­vegetarian pizza cannot have paneer topping.
 ● Only one type of crust can be selected for any pizza.
