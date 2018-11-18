@@ -1,29 +1,51 @@
 package com.test.qualys.datastructure;
 
-import com.google.common.collect.*;
+import com.google.common.collect.ImmutableBiMap;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableTable;
+import com.google.common.collect.Table;
 import com.test.qualys.entity.*;
 
 import static com.test.qualys.entity.Crust.*;
 import static com.test.qualys.entity.PizzaName.*;
-import static com.test.qualys.entity.PizzaName.ChickenTikka;
-import static com.test.qualys.entity.PizzaName.PepperBarbecueChicken;
-import static com.test.qualys.entity.Sides.*;
-import static com.test.qualys.entity.Size.*;
+import static com.test.qualys.entity.Sides.Colddrink;
+import static com.test.qualys.entity.Sides.MousseCake;
 import static com.test.qualys.entity.Toppings.*;
 
 public class CollectionData {
-    public static final String VEG = "veg";
-    public static final String NON_VEG = "nonVeg";
-    public static ImmutableBiMap<String, PizzaType> pizzaTypeMap = ImmutableBiMap.of(VEG, PizzaType.VEG,
+
+    private static final String VEG = "veg";
+    private static final String REGULAR = "regular";
+    private static final String MEDIUM = "medium";
+    private static final String LARGE = "large";
+
+    private static final String DELUXE_VEGGIE = "deluxeveggie";
+    private static final String CHEESE_AND_CORN = "cheeseandcorn";
+    private static final String PANEER_TIKKA = "paneertikka";
+    private static final String NON_VEG_SUPREME = "NonVegSupreme";
+    private static final String CHICKEN_TIKKA = "chickentikka";
+    private static final String PEPPER_BARBECUE_CHICKEN = "pepperbarbecuechicken";
+
+    private static final String BLACK_OLIVE = "BlackOlive";
+    private static final String CAPSICUM = "Capsicum";
+    private static final String PANEER = "Paneer";
+    private static final String MUSHROOM = "Mushroom";
+    private static final String FRESH_TOMATO = "FreshTomato";
+    private static final String CHICKEN_TIKKA1 = "ChickenTikka";
+    private static final String BARBEQUE_CHICKEN = "BarbequeChicken";
+    private static final String GRILLED_CHICKEN = "GrilledChicken";
+    private static final String NON_VEG = "nonVeg";
+    private static final String NEW_HAND_TOSSED = "newhandtossed";
+    private static final String WHEAT_THIN_CRUST = "wheatthincrust";
+    private static final String CHEESE_BURST = "cheeseburst";
+    private static final String FRESH_PAN_PIZZA = "freshpanpizza";
+    private static final String COLD_DRINK = "colddrink";
+    private static final String MOUSSE_CAKE = "mousseCake";
+
+    public static final ImmutableBiMap<String, PizzaType> pizzaTypeMap = ImmutableBiMap.of(VEG, PizzaType.VEG,
             NON_VEG, PizzaType.NON_VEG);
 
-    public static final String DELUXE_VEGGIE = "deluxeveggie";
-    public static final String CHEESE_AND_CORN = "cheeseandcorn";
-    public static final String PANEER_TIKKA = "paneertikka";
-    public static final String NON_VEG_SUPREME = "NonVegSupreme";
-    public static final String CHICKEN_TIKKA = "chickentikka";
-    public static final String PEPPER_BARBECUE_CHICKEN = "pepperbarbecuechicken";
-    public static ImmutableMap<String, PizzaName> pizzaNameMap = ImmutableMap.<String, PizzaName>builder()
+    public static final ImmutableMap<String, PizzaName> pizzaNameMap = ImmutableMap.<String, PizzaName>builder()
             .put(DELUXE_VEGGIE, DeluxeVeggie)
             .put(CHEESE_AND_CORN,CheeseAndCorn)
             .put(PANEER_TIKKA,PaneerTikka)
@@ -32,34 +54,18 @@ public class CollectionData {
             .put(PEPPER_BARBECUE_CHICKEN,PepperBarbecueChicken)
             .build();
 
-    public static final String NEW_HAND_TOSSED = "newhandtossed";
-    public static final String WHEAT_THIN_CRUST = "wheatthincrust";
-    public static final String CHEESE_BURST = "cheeseburst";
-    public static final String FRESH_PAN_PIZZA = "freshpanpizza";
-    public static ImmutableMap<String, Crust> crustMap = ImmutableMap.<String,Crust>builder()
+    public static final ImmutableMap<String, Crust> crustMap = ImmutableMap.<String,Crust>builder()
             .put(NEW_HAND_TOSSED,NewHandTossed)
             .put(WHEAT_THIN_CRUST,WheatThinCrust)
             .put(CHEESE_BURST,CheeseBurst)
             .put(FRESH_PAN_PIZZA,FreshPanPizza)
             .build();
 
-    public static final String COLD_DRINK = "colddrink";
-    public static final String MOUSSE_CAKE = "mousseCake";
-    public static ImmutableMap<String, Sides> sidesMap = ImmutableMap.<String,Sides>builder()
+    public static final ImmutableMap<String, Sides> sidesMap = ImmutableMap.<String,Sides>builder()
             .put(COLD_DRINK, Colddrink)
             .put(MOUSSE_CAKE, MousseCake)
             .build();
-
-
-    public static final String BLACK_OLIVE = "BlackOlive";
-    public static final String CAPSICUM = "Capsicum";
-    public static final String PANEER = "Paneer";
-    public static final String MUSHROOM = "Mushroom";
-    public static final String FRESH_TOMATO = "FreshTomato";
-    public static final String CHICKEN_TIKKA1 = "ChickenTikka";
-    public static final String BARBEQUE_CHICKEN = "BarbequeChicken";
-    public static final String GRILLED_CHICKEN = "GrilledChicken";
-    public static ImmutableMap<String, Toppings> toppingMap = ImmutableMap.<String,Toppings>builder()
+    public static final ImmutableMap<String, Toppings> toppingMap = ImmutableMap.<String,Toppings>builder()
             .put(BLACK_OLIVE,BlackOlive)
             .put(CAPSICUM,Capsicum)
             .put(PANEER,Paneer)
@@ -71,10 +77,7 @@ public class CollectionData {
             .build();
 
 
-    public static final String REGULAR = "regular";
-    public static final String MEDIUM = "medium";
-    public static final String LARGE = "large";
-    public static ImmutableMap<String, Size> sizegMap = ImmutableMap.<String,Size>builder()
+    public static final ImmutableMap<String, Size> sizegMap = ImmutableMap.<String,Size>builder()
             .put(REGULAR, Size.REGULAR)
             .put(MEDIUM, Size.MEDIUM)
             .put(LARGE, Size.LARGE)
@@ -82,7 +85,7 @@ public class CollectionData {
 
 
 
-    public static Table<PizzaName, Size, Double> priceingTable = ImmutableTable.<PizzaName, Size, Double> builder()
+    public static final Table<PizzaName, Size, Double> priceingTable = ImmutableTable.<PizzaName, Size, Double> builder()
             .put(DeluxeVeggie, Size.REGULAR,150.0)
             .put(DeluxeVeggie, Size.MEDIUM,200.0)
             .put(DeluxeVeggie, Size.LARGE,325.0)

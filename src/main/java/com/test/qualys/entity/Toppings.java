@@ -1,9 +1,7 @@
 package com.test.qualys.entity;
 
-import com.test.qualys.entity.Pizza;
-import com.test.qualys.entity.PizzaType;
-
-import static com.test.qualys.entity.PizzaType.*;
+import static com.test.qualys.entity.PizzaType.NON_VEG;
+import static com.test.qualys.entity.PizzaType.VEG;
 
 public enum Toppings {
 
@@ -23,8 +21,8 @@ public enum Toppings {
         this.pizzaType = pizzaType;
     }
 
-    double value;
-    PizzaType pizzaType;
+    final double value;
+    final PizzaType pizzaType;
 
     public Double getValue() {
         return value;

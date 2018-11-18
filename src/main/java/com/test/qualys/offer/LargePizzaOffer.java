@@ -10,11 +10,8 @@ public class LargePizzaOffer implements Offer{
     public Double execute(Pizza pizza) {
         double sum = 0;
         if (pizza.getSize().equals(Size.LARGE)){
-            int count = 0;
             for (Toppings toppings:pizza.getToppings()){
-                if (count < 2){
-                    sum = sum + toppings.getValue();
-                }
+                sum = sum + toppings.getValue();
 
             }
 

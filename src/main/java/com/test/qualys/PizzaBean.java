@@ -11,6 +11,7 @@ public class PizzaBean {
     private boolean extraCheese;
     private List<String> sides;
     private String size;
+    private boolean extraChees;
 
     public String getPizzaType() {
         return pizzaType;
@@ -52,9 +53,7 @@ public class PizzaBean {
         this.topings = topings;
     }
 
-    public boolean isExtraCheese() {
-        return extraCheese;
-    }
+
 
     public void setExtraCheese(boolean extraCheese) {
         this.extraCheese = extraCheese;
@@ -66,5 +65,13 @@ public class PizzaBean {
 
     public void setSides(List<String> sides) {
         this.sides = sides;
+    }
+
+    public boolean isExtraChees() {
+        return extraChees;
+    }
+
+    public void setExtraChees(boolean extraChees) {
+        this.extraChees = extraChees;
     }
 }

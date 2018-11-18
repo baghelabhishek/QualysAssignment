@@ -20,6 +20,7 @@ public class PizzaService {
                 .withToppings(pizzaBean.getTopings())
                 .withSize(pizzaBean.getSize())
                 .withSides(pizzaBean.getSides())
+                .withExtraChees(pizzaBean.isExtraChees())
                 .build();
     }
 

@@ -18,7 +18,6 @@ import static org.junit.Assert.*;
 public class PizzaServiceTest {
 
     private static final String VEG = "veg";
-    private static final String NON_VEG = "nonVeg";
 
     private static final String DELUXE_VEGGIE = "deluxeveggie";
     private static final String NEW_HAND_TOSSED = "newhandtossed";
@@ -27,7 +26,7 @@ public class PizzaServiceTest {
     private static final String CAPSICUM = "Capsicum";
     private static final String REGULAR = "regular";
 
-    PizzaService pizzaService = new PizzaService();
+    private final PizzaService pizzaService = new PizzaService();
 
 
 
@@ -49,7 +48,8 @@ public class PizzaServiceTest {
     @Test(expected = RuntimeException.class)
     public void nonVegPizzaCannotHavePannerToppings() {
         ArrayList<Toppings> toppings = Lists.newArrayList(Paneer);
-        Pizza pizza = buildPizza(PizzaType.NON_VEG, PepperBarbecueChicken, MEDIUM, WheatThinCrust, toppings);
+        ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
+        Pizza pizza = buildPizza(PizzaType.NON_VEG, PepperBarbecueChicken, MEDIUM, WheatThinCrust, toppings,sides,false);
 
         pizzaService.verifyPizaa(pizza);
     }
@@ -57,7 +57,8 @@ public class PizzaServiceTest {
     @Test(expected = RuntimeException.class)
     public void vegPizzaCannotNonVegTopping() {
         ArrayList<Toppings> toppings = Lists.newArrayList(BarbequeChicken);
-        Pizza pizza = buildPizza(PizzaType.VEG, DeluxeVeggie, MEDIUM, WheatThinCrust, toppings);
+        ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
+        Pizza pizza = buildPizza(PizzaType.VEG, DeluxeVeggie, MEDIUM, WheatThinCrust, toppings,sides,false);
 
         pizzaService.verifyPizaa(pizza);
     }
@@ -66,7 +67,8 @@ public class PizzaServiceTest {
     public void nonVegPizzaCanHaveOnlyOneNonVegTopping() {
 
         ArrayList<Toppings> toppings = Lists.newArrayList(BarbequeChicken,ChickenTikka_T);
-        Pizza pizza = buildPizza(PizzaType.VEG, DeluxeVeggie, MEDIUM, WheatThinCrust, toppings);
+        ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
+        Pizza pizza = buildPizza(PizzaType.VEG, DeluxeVeggie, MEDIUM, WheatThinCrust, toppings,sides,false);
 
         pizzaService.verifyPizaa(pizza);
 
@@ -75,18 +77,22 @@ public class PizzaServiceTest {
     @Test
     public void shouldNotThrowExceptionWhenPizzaFollowAllTheRule() {
         ArrayList<Toppings> toppings = Lists.newArrayList(Paneer);
-        Pizza pizza = buildPizza(PizzaType.VEG, PepperBarbecueChicken, MEDIUM, WheatThinCrust, toppings);
+        ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
+        Pizza pizza = buildPizza(PizzaType.VEG, PepperBarbecueChicken, MEDIUM, WheatThinCrust, toppings,sides,false);
 
         pizzaService.verifyPizaa(pizza);
     }
 
-    private Pizza buildPizza(PizzaType nonVeg, PizzaName pepperBarbecueChicken, Size medium, Crust wheatThinCrust, ArrayList<Toppings> toppings) {
+    public Pizza buildPizza(PizzaType nonVeg, PizzaName pepperBarbecueChicken, Size medium, Crust wheatThinCrust,
+                            ArrayList<Toppings> toppings,ArrayList<Sides> sides,boolean extraChees) {
         Pizza pizza = new Pizza();
         pizza.setPizzaType(nonVeg);
         pizza.setPizzaName(pepperBarbecueChicken);
         pizza.setCrust(wheatThinCrust);
         pizza.setSize(medium);
         pizza.setToppings(toppings);
+        pizza.setSidesList(sides);
+        pizza.setExtraChees(extraChees);
         return pizza;
     }
 

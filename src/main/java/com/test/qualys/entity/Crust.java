@@ -5,5 +5,5 @@ public enum Crust {
     NewHandTossed,
     WheatThinCrust,
     CheeseBurst,
-    FreshPanPizza;
+    FreshPanPizza
 }

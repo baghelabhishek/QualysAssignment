@@ -3,5 +3,5 @@ package com.test.qualys.entity;
 public enum PizzaType {
 
     VEG,
-    NON_VEG;
+    NON_VEG
 }

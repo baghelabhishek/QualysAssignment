@@ -7,5 +7,5 @@ public enum PizzaName {
     PaneerTikka,
     NonVegSupreme,
     ChickenTikka,
-    PepperBarbecueChicken;
+    PepperBarbecueChicken
 }

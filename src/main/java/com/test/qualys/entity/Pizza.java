@@ -14,6 +14,7 @@ public class Pizza {
     private List<Toppings> toppings;
     private List<Sides> sidesList;
     private Size size;
+    private boolean extraChees;
 
     public Pizza() {
     }
@@ -25,6 +26,7 @@ public class Pizza {
         this.toppings = builder.toppings;
         this.size = builder.size;
         this.sidesList = builder.sidesList;
+        this.extraChees = builder.extraChees;
     }
 
 
@@ -35,8 +37,9 @@ public class Pizza {
         private PizzaName pizzaName;
         private Crust crust;
         private List<Toppings> toppings = new ArrayList<>();
-        private List<Sides> sidesList;
+        private List<Sides> sidesList = new ArrayList<>();
         private Size size;
+        private boolean extraChees;
 
 
         public Builder(){
@@ -60,7 +63,7 @@ public class Pizza {
 
         public Builder withToppings(List<String> toppings){
             this.toppings =  toppings.stream()
-                        .map(e-> toppingMap.get(e))
+                        .map(toppingMap::get)
                         .collect(Collectors.toList());
             return this;
         }
@@ -71,11 +74,16 @@ public class Pizza {
 
         }
 
-        public Builder withSides(List<String> sides){
+        public Builder  withSides(List<String> sides){
            this.sidesList = sides.stream()
-                    .map(e-> sidesMap.get(e))
+                    .map(sidesMap::get)
                     .collect(Collectors.toList());
            return this;
+        }
+
+        public Builder withExtraChees(boolean chees){
+            this.extraChees = chees;
+            return this;
         }
 
         public Pizza build(){
@@ -85,10 +93,6 @@ public class Pizza {
 
     public List<Sides> getSidesList() {
         return sidesList;
-    }
-
-    public void setSidesList(List<Sides> sidesList) {
-        this.sidesList = sidesList;
     }
 
     public PizzaType getPizzaType() {
@@ -129,5 +133,17 @@ public class Pizza {
 
     public void setSize(Size size) {
         this.size = size;
+    }
+
+    public void setSidesList(List<Sides> sidesList) {
+        this.sidesList = sidesList;
+    }
+
+    public boolean isExtraChees() {
+        return extraChees;
+    }
+
+    public void setExtraChees(boolean extraChees) {
+        this.extraChees = extraChees;
     }
 }

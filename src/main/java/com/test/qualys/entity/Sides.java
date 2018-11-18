@@ -9,7 +9,7 @@ public enum Sides {
         this.value = value;
     }
 
-    double value;
+    final double value;
 
     public double getValue() {
         return value;
