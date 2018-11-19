@@ -32,9 +32,12 @@ The menu:
 Vegetarian Pizza:
 
 
-Ø Deluxe Veggie: (Regular: Rs. 150 Medium: Rs. 200 Large: Rs. 325)
-Ø Cheese and corn: (Regular: Rs. 175 Medium: Rs. 375 Large: Rs. 475)
-Ø Paneer Tikka: (Regular: Rs. 160 Medium: Rs. 290 Large: Rs. 340)
+Ø Deluxe Veggie:
+(Regular: Rs. 150 Medium: Rs. 200 Large: Rs. 325)
+Ø Cheese and corn: 
+(Regular: Rs. 175 Medium: Rs. 375 Large: Rs. 475)
+Ø Paneer Tikka: 
+(Regular: Rs. 160 Medium: Rs. 290 Large: Rs. 340)
 
 
 Non-­Vegetarian:
