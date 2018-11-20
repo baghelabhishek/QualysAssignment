@@ -1,8 +1,8 @@
-package com.test.qualys.validator;
+package com.qualys.validator;
 
-import com.test.qualys.entity.Pizza;
-import com.test.qualys.entity.PizzaType;
-import com.test.qualys.entity.Toppings;
+import com.qualys.entity.Pizza;
+import com.qualys.entity.PizzaType;
+import com.qualys.entity.Toppings;
 
 public class NonVegPizzaNotHavePaneerTopping implements Validator{
 

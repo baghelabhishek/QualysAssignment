@@ -1,11 +1,11 @@
-package com.test.qualys.interactor;
+package com.qualys.interactor;
 
-import com.test.qualys.entity.Pizza;
-import com.test.qualys.entity.Sides;
-import com.test.qualys.entity.Toppings;
-import com.test.qualys.offer.LargePizzaOffer;
+import com.qualys.entity.Pizza;
+import com.qualys.entity.Sides;
+import com.qualys.entity.Toppings;
+import com.qualys.offer.LargePizzaOffer;
 
-import static com.test.qualys.datastructure.CollectionData.priceingTable;
+import static com.qualys.datastructure.CollectionData.priceingTable;
 
 public class PricingService {
 

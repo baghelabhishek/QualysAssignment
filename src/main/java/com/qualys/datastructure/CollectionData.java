@@ -1,16 +1,16 @@
-package com.test.qualys.datastructure;
+package com.qualys.datastructure;
 
 import com.google.common.collect.ImmutableBiMap;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableTable;
 import com.google.common.collect.Table;
-import com.test.qualys.entity.*;
+import com.qualys.entity.*;
 
-import static com.test.qualys.entity.Crust.*;
-import static com.test.qualys.entity.PizzaName.*;
-import static com.test.qualys.entity.Sides.Colddrink;
-import static com.test.qualys.entity.Sides.MousseCake;
-import static com.test.qualys.entity.Toppings.*;
+import static com.qualys.entity.Crust.*;
+import static com.qualys.entity.PizzaName.*;
+import static com.qualys.entity.Sides.Colddrink;
+import static com.qualys.entity.Sides.MousseCake;
+import static com.qualys.entity.Toppings.*;
 
 public class CollectionData {
 
@@ -19,28 +19,28 @@ public class CollectionData {
     private static final String MEDIUM = "medium";
     private static final String LARGE = "large";
 
-    private static final String DELUXE_VEGGIE = "deluxeveggie";
-    private static final String CHEESE_AND_CORN = "cheeseandcorn";
-    private static final String PANEER_TIKKA = "paneertikka";
-    private static final String NON_VEG_SUPREME = "NonVegSupreme";
-    private static final String CHICKEN_TIKKA = "chickentikka";
-    private static final String PEPPER_BARBECUE_CHICKEN = "pepperbarbecuechicken";
+    public static final String DELUXE_VEGGIE = "deluxeveggie";
+    public static final String CHEESE_AND_CORN = "cheeseandcorn";
+    public static final String PANEER_TIKKA = "paneertikka";
+    public static final String NON_VEG_SUPREME = "nonvegsupreme";
+    public static final String CHICKEN_TIKKA = "chickentikka";
+    public static final String PEPPER_BARBECUE_CHICKEN = "pepperbarbecuechicken";
 
-    private static final String BLACK_OLIVE = "BlackOlive";
-    private static final String CAPSICUM = "Capsicum";
-    private static final String PANEER = "Paneer";
-    private static final String MUSHROOM = "Mushroom";
-    private static final String FRESH_TOMATO = "FreshTomato";
-    private static final String CHICKEN_TIKKA1 = "ChickenTikka";
-    private static final String BARBEQUE_CHICKEN = "BarbequeChicken";
-    private static final String GRILLED_CHICKEN = "GrilledChicken";
-    private static final String NON_VEG = "nonVeg";
-    private static final String NEW_HAND_TOSSED = "newhandtossed";
-    private static final String WHEAT_THIN_CRUST = "wheatthincrust";
-    private static final String CHEESE_BURST = "cheeseburst";
-    private static final String FRESH_PAN_PIZZA = "freshpanpizza";
-    private static final String COLD_DRINK = "colddrink";
-    private static final String MOUSSE_CAKE = "mousseCake";
+    public static final String BLACK_OLIVE = "blackolive";
+    public static final String CAPSICUM = "capsicum";
+    public static final String PANEER = "paneer";
+    public static final String MUSHROOM = "mushroom";
+    public static final String FRESH_TOMATO = "freshtomato";
+    public static final String CHICKEN_TIKKA1 = "chickentikka";
+    public static final String BARBEQUE_CHICKEN = "barbequechicken";
+    public static final String GRILLED_CHICKEN = "crilledchicken";
+    public static final String NON_VEG = "nonVeg";
+    public static final String NEW_HAND_TOSSED = "newhandtossed";
+    public static final String WHEAT_THIN_CRUST = "wheatthincrust";
+    public static final String CHEESE_BURST = "cheeseburst";
+    public static final String FRESH_PAN_PIZZA = "freshpanpizza";
+    public static final String COLD_DRINK = "colddrink";
+    public static final String MOUSSE_CAKE = "moussecake";
 
     public static final ImmutableBiMap<String, PizzaType> pizzaTypeMap = ImmutableBiMap.of(VEG, PizzaType.VEG,
             NON_VEG, PizzaType.NON_VEG);

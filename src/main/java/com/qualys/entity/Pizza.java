@@ -1,10 +1,10 @@
-package com.test.qualys.entity;
+package com.qualys.entity;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.test.qualys.datastructure.CollectionData.*;
+import static com.qualys.datastructure.CollectionData.*;
 
 public class Pizza {
 

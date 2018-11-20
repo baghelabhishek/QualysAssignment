@@ -1,12 +1,12 @@
-package com.test.qualys.interactor;
+package com.qualys.interactor;
 
 import com.google.common.collect.Lists;
-import com.test.qualys.PizzaBean;
-import com.test.qualys.entity.Pizza;
-import com.test.qualys.validator.NonVegPizzaNotHavePaneerTopping;
-import com.test.qualys.validator.OneNonVegToppingOnNonVegPizza;
-import com.test.qualys.validator.Validator;
-import com.test.qualys.validator.VegPizzaNotHaveNonVegTopping;
+import com.qualys.PizzaBean;
+import com.qualys.entity.Pizza;
+import com.qualys.validator.NonVegPizzaNotHavePaneerTopping;
+import com.qualys.validator.Validator;
+import com.qualys.validator.VegPizzaNotHaveNonVegTopping;
+import com.qualys.validator.OneNonVegToppingOnNonVegPizza;
 
 import java.util.ArrayList;
 

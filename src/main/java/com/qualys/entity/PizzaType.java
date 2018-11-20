@@ -1,4 +1,4 @@
-package com.test.qualys.entity;
+package com.qualys.entity;
 
 public enum PizzaType {
 

@@ -1,4 +1,4 @@
-package com.test.qualys;
+package com.qualys;
 
 import java.util.List;
 

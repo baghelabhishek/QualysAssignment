@@ -1,8 +1,8 @@
-package com.test.qualys.offer;
+package com.qualys.offer;
 
-import com.test.qualys.entity.Pizza;
-import com.test.qualys.entity.Size;
-import com.test.qualys.entity.Toppings;
+import com.qualys.entity.Pizza;
+import com.qualys.entity.Size;
+import com.qualys.entity.Toppings;
 
 public class LargePizzaOffer implements Offer{
 

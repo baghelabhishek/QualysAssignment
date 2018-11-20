@@ -1,19 +1,22 @@
-package com.test.qualys.interactor;
+package com.qualys.interactor;
 
 import com.google.common.collect.Lists;
-import com.test.qualys.PizzaBean;
-import com.test.qualys.entity.*;
+import com.qualys.PizzaBean;
+import com.qualys.entity.*;
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.test.qualys.entity.Crust.*;
-import static com.test.qualys.entity.PizzaName.*;
-import static com.test.qualys.entity.Size.*;
-import static com.test.qualys.entity.Toppings.*;
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+import static com.qualys.entity.Crust.NewHandTossed;
+import static com.qualys.entity.Crust.WheatThinCrust;
+import static com.qualys.entity.PizzaName.DeluxeVeggie;
+import static com.qualys.entity.PizzaName.PepperBarbecueChicken;
+import static com.qualys.entity.Toppings.*;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 public class PizzaServiceTest {
 
@@ -40,8 +43,8 @@ public class PizzaServiceTest {
 
         assertThat(pizza.getCrust(), is(NewHandTossed));
         assertThat(pizza.getToppings(),hasSize(2));
-        assertThat(pizza.getPizzaType(),is(PizzaType.VEG));
-        assertThat(pizza.getSize(),is(Size.REGULAR));
+        assertThat(pizza.getPizzaType(), Matchers.is(PizzaType.VEG));
+        assertThat(pizza.getSize(), Matchers.is(Size.REGULAR));
         assertThat(pizza.getSidesList(),hasSize(1));
     }
 
@@ -49,7 +52,7 @@ public class PizzaServiceTest {
     public void nonVegPizzaCannotHavePannerToppings() {
         ArrayList<Toppings> toppings = Lists.newArrayList(Paneer);
         ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
-        Pizza pizza = buildPizza(PizzaType.NON_VEG, PepperBarbecueChicken, MEDIUM, WheatThinCrust, toppings,sides,false);
+        Pizza pizza = buildPizza(PizzaType.NON_VEG, PepperBarbecueChicken, Size.MEDIUM, WheatThinCrust, toppings,sides,false);
 
         pizzaService.verifyPizaa(pizza);
     }
@@ -58,7 +61,7 @@ public class PizzaServiceTest {
     public void vegPizzaCannotNonVegTopping() {
         ArrayList<Toppings> toppings = Lists.newArrayList(BarbequeChicken);
         ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
-        Pizza pizza = buildPizza(PizzaType.VEG, DeluxeVeggie, MEDIUM, WheatThinCrust, toppings,sides,false);
+        Pizza pizza = buildPizza(PizzaType.VEG, DeluxeVeggie, Size.MEDIUM, WheatThinCrust, toppings,sides,false);
 
         pizzaService.verifyPizaa(pizza);
     }
@@ -68,7 +71,7 @@ public class PizzaServiceTest {
 
         ArrayList<Toppings> toppings = Lists.newArrayList(BarbequeChicken,ChickenTikka_T);
         ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
-        Pizza pizza = buildPizza(PizzaType.VEG, DeluxeVeggie, MEDIUM, WheatThinCrust, toppings,sides,false);
+        Pizza pizza = buildPizza(PizzaType.VEG, DeluxeVeggie, Size.MEDIUM, WheatThinCrust, toppings,sides,false);
 
         pizzaService.verifyPizaa(pizza);
 
@@ -78,7 +81,7 @@ public class PizzaServiceTest {
     public void shouldNotThrowExceptionWhenPizzaFollowAllTheRule() {
         ArrayList<Toppings> toppings = Lists.newArrayList(Paneer);
         ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
-        Pizza pizza = buildPizza(PizzaType.VEG, PepperBarbecueChicken, MEDIUM, WheatThinCrust, toppings,sides,false);
+        Pizza pizza = buildPizza(PizzaType.VEG, PepperBarbecueChicken, Size.MEDIUM, WheatThinCrust, toppings,sides,false);
 
         pizzaService.verifyPizaa(pizza);
     }

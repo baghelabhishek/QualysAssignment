@@ -1,20 +1,20 @@
-package com.test.qualys.interactor;
+package com.qualys.interactor;
 
 import com.google.common.collect.Lists;
-import com.test.qualys.entity.Pizza;
-import com.test.qualys.entity.PizzaType;
-import com.test.qualys.entity.Sides;
-import com.test.qualys.entity.Toppings;
+import com.qualys.entity.Pizza;
+import com.qualys.entity.PizzaType;
+import com.qualys.entity.Size;
+import com.qualys.entity.Sides;
+import com.qualys.entity.Toppings;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static com.test.qualys.entity.Crust.WheatThinCrust;
-import static com.test.qualys.entity.PizzaName.DeluxeVeggie;
-import static com.test.qualys.entity.Size.MEDIUM;
-import static com.test.qualys.entity.Toppings.BarbequeChicken;
-import static com.test.qualys.entity.Toppings.ChickenTikka_T;
+import static com.qualys.entity.Crust.WheatThinCrust;
+import static com.qualys.entity.PizzaName.DeluxeVeggie;
+import static com.qualys.entity.Toppings.BarbequeChicken;
+import static com.qualys.entity.Toppings.ChickenTikka_T;
 import static org.hamcrest.Matchers.is;
 
 public class PricingServiceTest {
@@ -27,7 +27,7 @@ public class PricingServiceTest {
     public void calculatePriceWithMultipleTopping() {
         ArrayList<Toppings> toppings = Lists.newArrayList(BarbequeChicken,ChickenTikka_T);
         ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
-        Pizza pizza = new PizzaServiceTest().buildPizza(PizzaType.VEG, DeluxeVeggie, MEDIUM, WheatThinCrust, toppings
+        Pizza pizza = new PizzaServiceTest().buildPizza(PizzaType.VEG, DeluxeVeggie, Size.MEDIUM, WheatThinCrust, toppings
         ,sides,false);
 
         double totalPrice = pricingService.totalPrice(pizza);
@@ -40,7 +40,7 @@ public class PricingServiceTest {
 
         ArrayList<Toppings> toppings = Lists.newArrayList(BarbequeChicken,ChickenTikka_T);
         ArrayList<Sides> sides = Lists.newArrayList(Sides.Colddrink);
-        Pizza pizza = new PizzaServiceTest().buildPizza(PizzaType.VEG, DeluxeVeggie, MEDIUM, WheatThinCrust, toppings
+        Pizza pizza = new PizzaServiceTest().buildPizza(PizzaType.VEG, DeluxeVeggie, Size.MEDIUM, WheatThinCrust, toppings
                 ,sides,true);
 
         double totalPrice = pricingService.totalPrice(pizza);

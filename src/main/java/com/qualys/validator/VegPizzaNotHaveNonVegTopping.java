@@ -1,15 +1,13 @@
-package com.test.qualys.validator;
+package com.qualys.validator;
 
-import com.test.qualys.entity.Toppings;
-import com.test.qualys.entity.Pizza;
-import com.test.qualys.entity.PizzaType;
-
-import static com.test.qualys.entity.PizzaType.*;
+import com.qualys.entity.Pizza;
+import com.qualys.entity.PizzaType;
+import com.qualys.entity.Toppings;
 
 public class VegPizzaNotHaveNonVegTopping implements Validator {
 
     public void execute(Pizza pizza) {
-        if (pizza.getPizzaType().equals(VEG)){
+        if (pizza.getPizzaType().equals(PizzaType.VEG)){
 
             for (Toppings toppings:pizza.getToppings()){
                 if (toppings.getPizzaType().equals(PizzaType.NON_VEG)){
