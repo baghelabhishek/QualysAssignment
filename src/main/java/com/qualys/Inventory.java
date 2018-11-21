@@ -143,6 +143,78 @@ public class Inventory {
     public void setMousseCake(int mousseCakeCount) {
         this.mousseCake.set(mousseCake.get() + mousseCakeCount);
     }
+    
+     public AtomicInteger getDeluxVeggie() {
+        return deluxVeggie;
+    }
+
+    public AtomicInteger getCheeseAndCorn() {
+        return cheeseAndCorn;
+    }
+
+    public AtomicInteger getPaneerTikka() {
+        return paneerTikka;
+    }
+
+    public AtomicInteger getNonVegSupreme() {
+        return nonVegSupreme;
+    }
+
+    public AtomicInteger getChickenTikka() {
+        return chickenTikka;
+    }
+
+    public AtomicInteger getNewHandTossed() {
+        return newHandTossed;
+    }
+
+    public AtomicInteger getWheatThinCrust() {
+        return wheatThinCrust;
+    }
+
+    public AtomicInteger getCheeseBurst() {
+        return cheeseBurst;
+    }
+
+    public AtomicInteger getFreshPanPizza() {
+        return freshPanPizza;
+    }
+
+    public AtomicInteger getBlackOlive() {
+        return blackOlive;
+    }
+
+    public AtomicInteger getCapsicum() {
+        return capsicum;
+    }
+
+    public AtomicInteger getPaneer() {
+        return paneer;
+    }
+
+    public AtomicInteger getMushroom() {
+        return mushroom;
+    }
+
+    public AtomicInteger getFreshTomato() {
+        return freshTomato;
+    }
+
+    public AtomicInteger getBarbequeChicken() {
+        return barbequeChicken;
+    }
+
+    public AtomicInteger getGrilledChicken() {
+        return grilledChicken;
+    }
+
+    public AtomicInteger getColdDrink() {
+        return coldDrink;
+    }
+
+    public AtomicInteger getMousseCake() {
+        return mousseCake;
+    }
 
 
     private void checkAvailabilty(String pizzaName, ImmutableMap<String, AtomicInteger> map) {
