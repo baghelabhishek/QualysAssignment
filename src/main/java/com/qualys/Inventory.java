@@ -10,6 +10,7 @@ import static com.qualys.datastructure.CollectionData.*;
 public class Inventory {
 
 
+
     private final AtomicInteger deluxVeggie = new AtomicInteger(10);
     private final AtomicInteger cheeseAndCorn = new AtomicInteger(10);
     private final AtomicInteger paneerTikka = new AtomicInteger(10);
@@ -72,79 +73,94 @@ public class Inventory {
 
     public void setDeluxVeggie(int deluxVeggieCount) {
 
-        this.deluxVeggie.set(deluxVeggie.get() + deluxVeggieCount);
+        this.deluxVeggie.addAndGet(deluxVeggieCount);
     }
 
     public void setCheeseAndCorn(int cheeseAndCornCount) {
 
-        this.cheeseAndCorn.set(cheeseAndCorn.get() + cheeseAndCornCount);
+        this.cheeseAndCorn.addAndGet(cheeseAndCornCount);
     }
 
-    public void setPaneerTikka(int paneerTikkaCount) {
-        this.paneerTikka.set(paneerTikka.get() + paneerTikkaCount);
+    public void setPaneerTikka(int paneerTikkaCount)
+    {
+        this.paneerTikka.addAndGet(paneerTikkaCount);
     }
 
-    public void setNonVegSupreme(int nonVegSupremeCount) {
-        this.nonVegSupreme.set( nonVegSupreme.get() + nonVegSupremeCount);
+    public void setNonVegSupreme(int nonVegSupremeCount)
+    {
+        this.nonVegSupreme.addAndGet(nonVegSupremeCount);
     }
 
-    public void setChickenTikka(int chickenTikkaCount) {
-        this.chickenTikka.set(chickenTikka.get() + chickenTikkaCount );
+    public void setChickenTikka(int chickenTikkaCount)
+    {
+        this.chickenTikka.addAndGet( chickenTikkaCount );
     }
 
-    public void setNewHandTossed(int newHandTossedCount) {
-        this.newHandTossed.set(newHandTossed.get() + newHandTossedCount);
+    public void setNewHandTossed(int newHandTossedCount)
+    {
+        this.newHandTossed.addAndGet( newHandTossedCount);
     }
 
-    public void setWheatThinCrust(int wheatThinCrustCount) {
-        this.wheatThinCrust.set(wheatThinCrust.get() + wheatThinCrustCount);
+    public void setWheatThinCrust(int wheatThinCrustCount)
+    {
+        this.wheatThinCrust.addAndGet(wheatThinCrustCount);
     }
 
-    public void setCheeseBurst(int cheeseBurstCount) {
-        this.cheeseBurst.set(cheeseBurst.get() + cheeseBurstCount);
+    public void setCheeseBurst(int cheeseBurstCount)
+    {
+        this.cheeseBurst.addAndGet(cheeseBurstCount);
     }
 
     public void setFreshPanPizza(int freshPanPizzaCount) {
-        this.freshPanPizza.set(freshPanPizza.get() + freshPanPizzaCount);
+        this.freshPanPizza.addAndGet(freshPanPizzaCount);
     }
 
-    public void setBlackOlive(int blackOliveCount) {
-        this.blackOlive.set(blackOlive.get() + blackOliveCount);
+    public void setBlackOlive(int blackOliveCount)
+    {
+        this.blackOlive.addAndGet( blackOliveCount);
     }
 
-    public void setCapsicum(int capsicumCount) {
-        this.capsicum.set(capsicum.get() + capsicumCount);
+    public void setCapsicum(int capsicumCount)
+    {
+        this.capsicum.addAndGet(capsicumCount);
     }
 
-    public void setPaneer(int paneerCount) {
-        this.paneer.set(paneer.get() + paneerCount);
+    public void setPaneer(int paneerCount)
+    {
+        this.paneer.addAndGet( paneerCount);
     }
 
-    public void setMushroom(int mushroomCount) {
-        this.mushroom.set(mushroom.get() + mushroomCount);
+    public void setMushroom(int mushroomCount)
+    {
+        this.mushroom.addAndGet( mushroomCount);
     }
 
-    public void setFreshTomato(int freshTomatoCount) {
-        this.freshTomato.set(freshTomato.get() + freshTomatoCount);
+    public void setFreshTomato(int freshTomatoCount)
+    {
+        this.freshTomato.addAndGet( freshTomatoCount);
     }
 
-    public void setBarbequeChicken(int barbequeChickenCount) {
-        this.barbequeChicken.set(barbequeChicken.get() + barbequeChickenCount);
+    public void setBarbequeChicken(int barbequeChickenCount)
+    {
+        this.barbequeChicken.addAndGet( barbequeChickenCount);
     }
 
-    public void setGrilledChicken(int grilledChickenCount) {
-        this.grilledChicken.set(grilledChicken.get() + grilledChickenCount);
+    public void setGrilledChicken(int grilledChickenCount)
+    {
+        this.grilledChicken.addAndGet(grilledChickenCount);
     }
 
-    public void setColdDrink(int coldDrinkCount) {
-        this.coldDrink.set(coldDrink.get() + coldDrinkCount);
+    public void setColdDrink(int coldDrinkCount)
+    {
+        this.coldDrink.addAndGet(coldDrinkCount);
     }
 
-    public void setMousseCake(int mousseCakeCount) {
-        this.mousseCake.set(mousseCake.get() + mousseCakeCount);
+    public void setMousseCake(int mousseCakeCount)
+    {
+        this.mousseCake.addAndGet( mousseCakeCount);
     }
-    
-     public AtomicInteger getDeluxVeggie() {
+
+    public AtomicInteger getDeluxVeggie() {
         return deluxVeggie;
     }
 
@@ -224,6 +240,7 @@ public class Inventory {
         }
         pizzaNameCount.decrementAndGet();
     }
+
 
 
 }
