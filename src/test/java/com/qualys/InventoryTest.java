@@ -46,4 +46,14 @@ public class InventoryTest {
 
         inventory.checkAvailability(pizza);
     }
+    
+    @Test
+    public void userShouldBeAbleToAddCasicumToInventory() {
+
+        int beforeAdding = inventory.getCapsicum().get();
+        inventory.setCapsicum(4);
+
+        Assert.assertThat(inventory.getCapsicum().get(), Matchers.is(beforeAdding+ 4));
+
+    }
 }
