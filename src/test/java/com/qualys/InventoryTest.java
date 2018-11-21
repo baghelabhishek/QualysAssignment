@@ -11,6 +11,8 @@ import static com.qualys.entity.Crust.WheatThinCrust;
 import static com.qualys.entity.PizzaName.ChickenTikka;
 import static com.qualys.entity.Sides.Colddrink;
 import static com.qualys.entity.Toppings.Paneer;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 public class InventoryTest {
 
@@ -52,6 +54,6 @@ public class InventoryTest {
         int beforeAdding = inventory.getCapsicum().get();
         inventory.setCapsicum(4);
 
-        Assert.assertThat(inventory.getCapsicum().get(), Matchers.is(beforeAdding+ 4));
+       assertThat(inventory.getCapsicum().get(), is(beforeAdding+ 4));
     }
 }
